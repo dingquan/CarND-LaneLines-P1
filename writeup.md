@@ -41,14 +41,10 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
+1. haven't got around to stablize the lines by averaging the line positions across some number of frames 
+2. the region of interest coordinates are hard coded which might not work for different videos
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+1. Have a buffer of 5 frames of images and average the line positions to reduce the flickering
+2. In slack, Radu Prekup suggested finding the vanish point to filter out canny detected lines that are not part of the lane lines. I tried to use it in the challenge video using the suggested RANSAC regressor but haven't got it working properly yet.
